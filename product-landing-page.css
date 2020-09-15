@@ -1,3 +1,11 @@
+:root {
+    --bg-color: #272727;
+    --text-color: #747474;
+    --highlight-orange-color: #FF652F;
+    --highlight-yellow-color: #FFE400;
+    --highlight-green-color: #14A76c;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -17,6 +25,7 @@
     padding: 0px 24px 0px 24px;
 
     border-bottom: 1px solid black;
+    color: black;
 }
 
 #logo {
@@ -36,6 +45,12 @@ nav > ul {
 
 nav > ul > li {
     list-style: none;
+}
+
+main {
+    background-image: url("background-image.jpg");
+
+    color: var(--text-color);
 }
 
 #service {
