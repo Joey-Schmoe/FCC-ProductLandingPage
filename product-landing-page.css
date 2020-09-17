@@ -3,8 +3,11 @@
     --bg-color-trans: rgba(39, 39, 39, 0.8);
     --text-color: #747474;
     --highlight-orange-color: #FF652F;
+    --soft-orange-color: rgba(255, 101, 47, 0.6);
     --highlight-yellow-color: #FFE400;
+    --soft-yellow-color: rgba(255, 228, 0, 0.6);
     --highlight-green-color: #14A76c;
+    --soft-green-color: rgba(20, 167, 108, .6);
 }
 
 * {
@@ -78,11 +81,11 @@ nav > ul > li {
 nav li a {
     color: white;
     line-height: 42px;
+    font-size: 12px;
 }
 
 main {
     background-image: url("background-image.jpg");
-
     color: var(--text-color);
 }
 
@@ -141,6 +144,15 @@ main {
     margin: auto;
 }
 
+.section-seperator {
+    margin-top: 64px;
+    height: 24px;
+    display: block;
+    background-color: var(--bg-color);
+    border-top: 2px solid #171717;
+    border-bottom: 2px solid #171717;
+}
+
 #service-wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -148,14 +160,59 @@ main {
     align-content: space-around;
 }
 
+#service-1 {
+    box-shadow: 
+    0px 0px 15px 6px var(--soft-orange-color),
+    0px 0px 7px 3px var(--highlight-orange-color);
+}
+
 #service-1 h2 {
     color: var(--highlight-orange-color);
+}
+
+#service-2 {
+    box-shadow: 
+    0px 0px 15px 6px var(--soft-yellow-color),
+    0px 0px 7px 3px var(--highlight-orange-color);
 }
 
 #service-2 h2 {
     color: var(--highlight-yellow-color);
 }
 
+#service-3 {
+    box-shadow: 
+    0px 0px 15px 6px var(--soft-green-color),
+    0px 0px 7px 3px var(--highlight-green-color);
+}
+
 #service-3 h2 {
     color: var(--highlight-green-color);
+}
+
+
+#staff .grid-wrapper {
+    width: 80%;
+    margin: auto;
+    margin-top: 64px;
+    display: grid;
+    grid-template-columns: 128px auto 128px;
+    grid-template-rows: 128px 48px 128px 48px 128px;
+    grid-template-areas: 
+    'img1 bio1 bio1'
+    '. . .'
+    'bio2 bio2 img2'
+    '. . .'
+    'img3 bio3 bio3';
+}
+
+#staff img {
+    max-width: 100%;
+    padding: 8px;
+}
+
+#staff .staff-bio-div {
+    text-align: center;
+    display: flex;
+    align-items: center;
 }
